@@ -16,12 +16,20 @@
             page doit afficher ce que vous avez saisie en rouge. Utilisez $_POST[‘champ1’]
 
          ---------------------------------------------------------------------------------------------------*/
-
-
-
-
             ?>
+        <form action="#" method="post">
+            
+            <label>Veuillez saisir vontre nom d'utilisateur : </label>
+            <input type="text" placeholder="User name" name="username">
+            <input type="submit" value="Confirmer">  
 
+        </form> <br>
+
+        <?php
+
+        echo "Le numéro de téléphone enregistré est le : <font color='red'>".$_POST["username"]."</font>";
+
+        ?>
 
     </body>
 </html>
