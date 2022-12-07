@@ -9,7 +9,7 @@
 
          /*---------------------------------------------------------------------------------------------------
 
-   		   Exercice 1
+   		   Exercice 6
 		
            Créer un petit formulaire avec une zone de texte et un bouton. Lorsque vous cliquer sur
 
@@ -17,6 +17,23 @@
 
 
          ---------------------------------------------------------------------------------------------------*/
+        
+        
+        ?>
+
+         <form action="#" method="get">
+
+         <label>Veuillez saisir vontre nom d'utilisateur : </label>
+         <input type="text" placeholder="User name" name="username">
+         <input type="submit" value="Confirmer">  
+
+     </form> <br>
+
+     <?php
+
+     echo "Le numéro de téléphone enregistré est le : <font color='purple'>".($_GET["username"])."</font>";
+
+
 
             ?>
 
