@@ -8,6 +8,7 @@
 
     <a href="exo/exo1.php">Exercice 1</a>
     <a href="exo/exo2.php">Exercice 2</a>
+    <a href="exo/exo3.php">Exercice 3</a>
 
     </body>
 </html>
