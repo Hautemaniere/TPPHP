@@ -30,6 +30,6 @@
         echo "Le user enregistré est le : <font color='red'>".$_POST["username"]."</font>";
 
         ?>
-        <a href="index.php">Retour</a>
+        <p><a href="../index.php">Retour</a></p>
     </body>
 </html>

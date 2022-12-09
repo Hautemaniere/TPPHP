@@ -24,17 +24,17 @@
 
             if($LaVarRandom%2==1){
 
-                echo "<div style='background-color: red;'>".$LaVarRandom." est impaire ";
+                echo "<div style='background-color: red;'>".$LaVarRandom." est impaire </div>";
 
             }else{
 
-                echo "<div style='background-color: blue;'>".$LaVarRandom." est paire ";
+                echo "<div style='background-color: blue;'>".$LaVarRandom." est paire </div>";
 
             }
 
 
             ?>
 
-
+        <p><a href="../index.php">Retour</a></p>
     </body>
 </html>

@@ -29,7 +29,7 @@
 
                 $_SESSION["User"] = $_POST["username"];
 
-                if ($_SESSION["User"] == '')
+                if (isset($_SESSION["User"]))
                 {
                     echo "<font color='purple'> Impossible de trouver l'user saisi, veuillez saisir un nouvelle user</font>";
                 }
@@ -38,7 +38,7 @@
                 }
 
             ?>
-        <br>
-        <a href="../index.php">Retour</a>
+        
+        <p><a href="../index.php">Retour</a></p>
     </body>
 </html>

@@ -23,27 +23,38 @@
 
             ?>
 
-        <form action="#" method="post">
-
-            <label>Veuillez saisir vontre nom d'utilisateur : </label>
-            <input type="text" placeholder="User name" name="username">
-            <input type="submit" value="Confirmer">  
-
-        </form> <br>
-
+        <form action='' method="get">
+            <label>Saisir un User : </label>
+            <input type="text" name="texte">
+            <input type="submit" value="Confirmer">
+        </form>
+        
         <?php
 
-        $_SESSION["User"] = $_POST["username"];
+        if (!empty($_GET)) {
+            if (!empty($_SESSION)) {
+                if (empty($_GET['texte'])) {
+                    echo "<div>Il n'y a pas d'user saisie !</div>";
+                } 
 
-        if($_SESSION["User"]== '')
-        {
-            echo "<font color='red'> Impossible de trouver l'user saisi, veuillez à nouveau saisir un numéro</font>";
-        }
-        else{
-            echo "Le user enregistré est le : ".$_SESSION["User"]."</font>";
-        }
+                else {
+                    echo "<div>La variable actuelle est : <span id='violet'>".$_GET['texte']."</span></div>";
+                    $_SESSION["mem"] = "" . $_GET['texte'];
+                }
+            }
 
-    ?>
-        <a href="index.php">Retour</a>
+            else{
+                if (empty($_GET['texte'])){
+                    echo "<div>Il n'y a pas de texte !</div>";
+                } 
+
+                else {
+                    echo "<div>La variable actuelle est :".$_GET['texte']."</div>";
+                }
+            }
+        }
+            
+        ?>
+            <p><a href="../index.php">Retour</a></p>
     </body>
 </html>
