@@ -23,7 +23,7 @@
 
          <form action="#" method="get">
 
-         <label>Veuillez saisir vontre nom d'utilisateur : </label>
+         <label>Veuillez saisir votre nom d'utilisateur : </label>
          <input type="text" placeholder="User name" name="username">
          <input type="submit" value="Confirmer">  
 

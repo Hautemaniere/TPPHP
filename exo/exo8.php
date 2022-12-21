@@ -18,26 +18,36 @@
          ---------------------------------------------------------------------------------------------------*/
          ?>
 
-        <form action="#" method="post">
-                <label>Veuillez saisir un user :</label>
-                <input type="text" placeholder="eXo aKa l'As" name="username">
-                <input type="submit" value="Confirmer">  
-                <input type="reset" value="Reset">          
-            </form> <br>
-
             <?php
-
-                $_SESSION["User"] = $_POST["username"];
-
-                if (isset($_SESSION["User"]))
-                {
-                    echo "<font color='purple'> Impossible de trouver l'user saisi, veuillez saisir un nouvelle user</font>";
+                session_start();
+                if (isset($_POST["delete"])) {
+                    unset($_SESSION['nom']);
                 }
-                else{
-                    echo "L'user enregistré est le : <font color='red'>".$_SESSION["User"]."</font>";
-                }
+            
+                if (isset($_SESSION["nom"])) {
+                    echo "vous etes connecté";
+                ?>
+                    <form action="" method="post">
+                        <input type="submit" name="delete" value="deconnexion">
+                    </form>
+                    <?php
+                } else {
+            
+                    if (isset($_POST["nom"])) {
+            
+                        $_SESSION["nom"] = $_POST["nom"];
+                        echo "ton nom es : " . $_SESSION["nom"];
+                    } else {
+                        echo "saisis ton nom";
+                    }}
+                    ?>
+                        <form action="" method="post">
+                            <label name="nom">Quel est ton prénom ? :</label>
+                            <input type="text" name="nom">
+                            <input type="submit" name="send" value="envoyer">
+            
+                        </form>
 
-            ?>
         
         <p><a href="../index.php">Retour</a></p>
     </body>
