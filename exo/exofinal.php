@@ -29,45 +29,67 @@
 
     -------------------------------------------------------------------------------------------------------------------------------------*/
 
+
     session_start();
+
+
     if  (isset($_POST["connecter"]))
     {
+
             if ($_POST["ndu"] == "Julien" and $_POST["mdp"] == "1234")
             {
+
                 $_SESSION["ndu"] = $_POST["ndu"]; 
+
                 $_SESSION["mdp"] = $_POST["mdp"]; 
-                $_SESSION["cr"] = true; 
+
+                $_SESSION["cr"] = true;
+
             }
             elseif ($_POST["ndu"] != "Julien"){
                 echo "le nom d'utilisateur est incorrect";
+
             }
             elseif ($_POST["mdp"] != "1234"){
                 echo "le mot de passe est incorrect";
+
             }
     }
     else if (isset($_POST["deconnecter"]))
     { 
+
                 session_unset();
                 session_destroy();
+
     }
-            if (isset($_SESSION["cr"]) and $_SESSION["cr"] == true)
+            if (isset($_SESSION["cr"]) == true)
             {
-                echo "Vous etes connecter sur le comtpe de :".$_SESSION["ndu"];
+
+                echo "<p>Vous êtes connecté sur le compte de : ".$_SESSION["ndu"]."</p>";
+                
                 ?>
                     <form action="#" method="post">
-                        <input type="submit" name="deconnecter" value="Se deconnecter">
+
+                        <input type="submit" name="deconnecter" value="Vous deconnectez">
+
                     </form>
                 <?php 
             }
             else{
+
                 ?>     
                     <form action="#" method="post">
-                        <p><label>Nom d'utilisateur</label>
-                        <input type="text" placeholder="Nom d'utilisateur" name="ndu"  required></p>
+
+                        <p><label>Nom d'utilisateur :</label>
+                        <input type="text" placeholder="Nom d'utilisateur" name="ndu"></p>
+
                         <p><label>Mot de passe :</label>
-                        <input type="password" placeholder="Mot de passe" name="mdp"  required></p>
+                        <input type="text" placeholder="Mot de passe" name="mdp"></p>
+
                         <input type="submit" value="Se connecter" name="connecter">
+
                     </form>
+                    
                 <?php
             }
     ?>
