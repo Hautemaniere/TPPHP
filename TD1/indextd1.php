@@ -6,7 +6,8 @@
 
     </head>
     <body>
-
+    <a href="../indexphp.php">Acceuil</a>
+    <p>
     <a href="exo/exo1.php">Exercice 1</a>
     <a href="exo/exo2.php">Exercice 2</a>
     <a href="exo/exo3.php">Exercice 3</a>
@@ -16,6 +17,7 @@
     <a href="exo/exo7.php">Exercice 7</a>
     <a href="exo/exo8.php">Exercice 8</a>
     <a href="exo/exofinal.php">Exercice final</a>
+    </p>
 
     </body>
 </html>
