@@ -49,8 +49,15 @@ function tab2($colone1,$colone2,$colone3)
 ?>
 
 <?php
-function tab3()
-{
 
+function tab3($array) {
+  
+    $sum = array_sum($array);
+    $count = count($array);
+    $average = $sum / $count;
+
+    return $average;
 }
+
 ?>
+

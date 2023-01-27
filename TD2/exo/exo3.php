@@ -20,7 +20,32 @@
          ---------------------------------------------------------------------------------------------------*/
          include 'function.php';
 
+         $i;
+         $numbers = array(
+            0 => 1,
+            1 => 13,
+            2 => 26,
+            3 => 52,
+            4 => 106,
+          );
+          ?>
 
+
+          <table border = "2px">
+
+          <caption style="border : 2px solid black;"> Chiffres du tableau</caption>
+
+          <?php
+
+
+         foreach($numbers as $number)
+         {
+            echo "<tr><td> Element " .($i+1). "=" .$numbers[$i]. "</td></tr>";
+         }
+
+         $average = tab3($numbers);
+
+         echo $average;
 
             ?>
 
