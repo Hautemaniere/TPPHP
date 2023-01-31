@@ -14,7 +14,9 @@
     <a href="exo/exofinal.php">Exercice final</a>
     </p>
     <p>
-    <a href="exo/exoPHPxBDD.php">Exercice sup 1</a>
+    <a href="exo/exoInsert.php">Exercice Insert</a>
+    <a href="exo/exoUpdate.php">Exercice Update</a>
+    <a href="exo/crud.php">Exercice crud</a>
     </p>
 
     </body>
